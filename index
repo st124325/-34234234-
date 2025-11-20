@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌤️ Погода сейчас</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Погода сейчас</h1>
+            <p>Узнай погоду в любом городе мира</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Введите название города..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn">🔍 Поиск</button>
+            </div>
+            <div class="location-buttons">
+                <button id="currentLocationBtn">📍 Мое местоположение</button>
+            </div>
+        </div>
+
+        <main id="weatherContent">
+            <div class="welcome-message">
+                <h2>Добро пожаловать!</h2>
+                <p>Введите название города или используйте ваше местоположение</p>
+                <div class="example-cities">
+                    <span class="city-tag" data-city="Москва">Москва</span>
+                    <span class="city-tag" data-city="Санкт-Петербург">Санкт-Петербург</span>
+                    <span class="city-tag" data-city="Новосибирск">Новосибирск</span>
+                    <span class="city-tag" data-city="Лондон">Лондон</span>
+                </div>
+            </div>
+        </main>
+
+        <div class="loading hidden" id="loading">
+            <div class="spinner"></div>
+            <p>Ищем погоду...</p>
+        </div>
+
+        <footer>
+            <p>Данные предоставлены OpenWeatherMap</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
